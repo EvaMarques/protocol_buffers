@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+message Date {
+  int32 year = 1;
+  int32 month = 2;
+  int32 day = 3;
+}
+
+message Location {
+  float latitude = 1;
+  float longitude = 2;
+}
+
+message Money {
+  string currency = 1;
+  int64 integral_amount = 2;
+  int64 decimal_amount = 3;
+}
+
+message DayOfWeek {
+  enum Weekday {
+    UNDEFINED = 0;
+    MONDAY = 1;
+    TUESDAY = 2;
+    WEDNESDAY = 3;
+    THRUSDAY = 4;
+    FRIDAY = 5;
+    SATURDAY = 6;
+    MONDAY = 7;
+  }
+  Weekday day = 1;
+}
+
+message Person {
+  string first_name = 1;
+  repeated string middle_names = 2;
+  string last_name = 3;
+}
